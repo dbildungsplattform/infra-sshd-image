@@ -9,10 +9,11 @@ permissions:
   # required for all workflows
   security-events: write
   packages: read
+  contents: read
 
 jobs:
   trivy_image_scan_cron:
-    uses: dbildungsplattform/dbp-github-workflows/.github/workflows/check-trivy.yaml@9bfc5de7a4cde05925607a4d34944b197b37064c
+    uses: dbildungsplattform/dbp-github-workflows/.github/workflows/check-trivy.yaml@4b5c0434f28b537e9199ffebc21f4e6e39cbcdde
     with:
       image_ref: "ghcr.io/dbildungsplattform/infra-sshd:latest"
   
