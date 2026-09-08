@@ -12,17 +12,9 @@ permissions:
   actions: read
   contents: read
 
-# Template Single Image Repro GHA
 jobs:
   trivy_image_scan_cron:
     uses: dbildungsplattform/dbp-github-workflows/.github/workflows/check-trivy.yaml@9bfc5de7a4cde05925607a4d34944b197b37064c
     with:
       image_ref: "ghcr.io/dbildungsplattform/infra-sshd:latest"
-      # severity: ${{ inputs.trivy_severity }}
-      # fail_on_vulnerabilites: ${{ inputs.fail_on_vulnerabilites }}
-      # ignore-unfixed: ${{ inputs.ignore-unfixed }}
-      # report_location: ${{ inputs.report_location }}
-      # limit-severities-for-sarif:  ${{ inputs.limit-severities-for-sarif }}
-      # skip_dirs: ${{ inputs.skip_dirs }}
-      # skip_files: ${{ inputs.skip_files }}
   
