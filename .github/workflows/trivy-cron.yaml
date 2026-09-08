@@ -15,6 +15,6 @@ permissions:
 # Template Single Image Repro GHA
 jobs:
   trivy_image_scan_cron:
-    uses: dbildungsplattform/infra-tools/.github/workflows/trivy-scan.yaml@a4994d155f9305d46bc6e0c0144d82648f8427a3 # version used as does not require contents: write permissions
+    uses: dbildungsplattform/infra-tools/.github/workflows/trivy-scan.yaml@094a0e74897bef119a5a8fc73da781ff1f2274e6 # 8.4.2
     with:
       image-ref: 'ghcr.io/dbildungsplattform/infra-sshd:latest'
