@@ -13,6 +13,7 @@ LABEL build.hash="${BUILD_HASH}"
 # Install sshd
 RUN set -x \
     && apt-get -y update --no-install-recommends \
+    && apt-get -y upgrade \
     && apt-get -y install \
         openssh-server\
     && rm -rf /var/lib/apt/lists/*\
