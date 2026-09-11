@@ -8,13 +8,12 @@ on:
 permissions:
   # required for all workflows
   security-events: write
-  # only required for workflows in private repositories
-  actions: read
+  packages: read
   contents: read
 
-# Template Single Image Repro GHA
 jobs:
   trivy_image_scan_cron:
-    uses: dbildungsplattform/infra-tools/.github/workflows/trivy-scan.yaml@a4994d155f9305d46bc6e0c0144d82648f8427a3 # version used as does not require contents: write permissions
+    uses: dbildungsplattform/dbp-github-workflows/.github/workflows/check-trivy.yaml@4b5c0434f28b537e9199ffebc21f4e6e39cbcdde # 8.4.3
     with:
-      image-ref: 'ghcr.io/dbildungsplattform/infra-sshd:latest'
+      image_ref: "ghcr.io/dbildungsplattform/infra-sshd:latest"
+  
